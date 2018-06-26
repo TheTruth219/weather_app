@@ -1,21 +1,28 @@
 const https =require('https');
 const http = require("http");
+const api = require("./api.json");
+
 const report = document.querySelector(".report");
+
+function convertTemp (Kelvin_Temp){
+  let Frnht = Kelvin_Temp * 9/5 -459.67;
+  return Math.floor(Frnht);
+}
 function printError (error) {
   console.error(error.message);
 }
 
-async function printMessage(username, badgeCount, points) {
-  const message = `${username} has ${badgeCount} total badge(s) and ${points} points in JavaScript`;
+async function printMessage(zip, temp) {
+  const message = `It is ${temp}&deg F in ${zip} right now.`;
     await console.log(message);
      return  report.innerHTML = message;
 
 
 }
 
-function get (username)  {
+function get (zip)  {
   try {
-      const request = https.get(`https://teamtreehouse.com/${username}.json`, response => {
+      const request = https.get(`https://api.openweathermap.org/data/2.5/weather?zip=${zip}&APPID=${api.key}`, response => {
         if (response.statusCode === 200) {
             let body = "";
             response.on('data', data =>{
@@ -24,13 +31,13 @@ function get (username)  {
             response.on('end', () => {
               try {
                 const profile =JSON.parse(body);
-                printMessage(username, profile.badges.length, profile.points.JavaScript);
+                printMessage(profile.name, convertTemp(profile.main.temp));
               }catch (error) {
                 printError(error);
                 }
               });
         }else {
-            const message = `The profile for ${username} was ${http.STATUS_CODES[response.statusCode].toLowerCase()}. Try someone you ACTUALLY know next time :)`;
+            const message = `The profile for ${zip} was ${http.STATUS_CODES[response.statusCode].toLowerCase()}. Try somewhere you ACTUALLY know next time :)`;
             const statusCodeError = new Error(message);
             printError(statusCodeError);
         }

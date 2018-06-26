@@ -1,30 +1,30 @@
 
 const profile = require('./profile');
 
-//Select input on page to get username
+//Select input on page to get zipInput
 
 
   const form =  document.querySelector(".form-submit");
-  const username = document.querySelector(".username");
-  const submitUser = document.querySelector(".submit-btn");
+  const zipInput = document.querySelector(".zipInput");
+  const submitBtn = document.querySelector(".submit-btn");
 
   let userinfo = " ";
 
-  username.addEventListener("focus",(e) => {
-      if (e.target.value === "username"){
+  zipInput.addEventListener("focus",(e) => {
+      if (e.target.value === "Enter Zip Code"){
         e.target.value = " ";
       }
   });
-  username.addEventListener("focusout",(e) => {
+  zipInput.addEventListener("focusout",(e) => {
       if (e.target.value === " "){
-        e.target.value = "username";
+        e.target.value = "Enter Zip Code";
       }
   });
   form.addEventListener("submit", async function(e){
     e.preventDefault();
-     userinfo += username.value;
+     userinfo += zipInput.value;
     let users = [userinfo.trim()];
     let result = await users.forEach(profile.get)
     userinfo = " ";
-    username.value = userinfo;
+    zipInput.value = userinfo;
   });
