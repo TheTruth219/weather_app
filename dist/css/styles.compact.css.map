@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "styles.compact.css",
+	"sources": [
+		"styles.scss"
+	],
+	"sourcesContent": [
+		"// compileOnSave: true\r\n\r\nh1, .input-container {\r\n  text-align: center;\r\n}\r\n"
+	],
+	"names": [],
+	"mappings": "qEAEA,AAAA,EAAE,EAAE,gBAAgB,CAAC,EACnB,UAAU,EAAE,MAAM,GACnB"
+}

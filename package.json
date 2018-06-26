@@ -2,16 +2,22 @@
   "name": "node_project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "browser": "./dist/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "^0.28.11",
+    "style-loader": "^0.21.0",
     "webpack": "^4.12.1",
     "webpack-cli": "^3.0.8"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
   }
 }
