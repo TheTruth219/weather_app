@@ -1,13 +1,16 @@
 const https =require('https');
 const http = require("http");
-
+const report = document.querySelector(".report");
 function printError (error) {
   console.error(error.message);
 }
 
-function printMessage(username, badgeCount, points) {
+async function printMessage(username, badgeCount, points) {
   const message = `${username} has ${badgeCount} total badge(s) and ${points} points in JavaScript`;
-    console.log(message);
+    await console.log(message);
+     return  report.innerHTML = message;
+
+
 }
 
 function get (username)  {
