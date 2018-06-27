@@ -5,8 +5,8 @@
 		"styles.scss"
 	],
 	"sourcesContent": [
-		"// compileOnSave: true\r\n\r\nh1, .input-container {\r\n  text-align: center;\r\n}\r\n"
+		"// compileOnSave: true\r\n\r\nh1, .report, .input-container {\r\n  text-align: center;\r\n  margin-top: 5em;\r\n}\r\n"
 	],
 	"names": [],
-	"mappings": "qEAEA,AAAA,EAAE,EAAE,gBAAgB,CAAC,EACnB,UAAU,EAAE,MAAM,GACnB"
+	"mappings": "qEAEA,AAAA,EAAE,EAAE,OAAO,EAAE,gBAAgB,CAAC,EAC5B,UAAU,EAAE,MAAM,EAClB,UAAU,EAAE,GAAG,GAChB"
 }

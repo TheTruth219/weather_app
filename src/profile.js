@@ -12,7 +12,7 @@ function printError (error) {
   console.error(error.message);
 }
 
-async function printMessage(zip, temp) {
+async function printWeather(zip, temp) {
   const message = `It is ${temp}&deg F in ${zip} right now.`;
     await console.log(message);
      return  report.innerHTML = message;
@@ -31,13 +31,13 @@ function get (zip)  {
             response.on('end', () => {
               try {
                 const profile =JSON.parse(body);
-                printMessage(profile.name, convertTemp(profile.main.temp));
+                printWeather(profile.name, convertTemp(profile.main.temp));
               }catch (error) {
                 printError(error);
                 }
               });
         }else {
-            const message = `The profile for ${zip} was ${http.STATUS_CODES[response.statusCode].toLowerCase()}. Try somewhere you ACTUALLY know next time :)`;
+            const message = `The location for ${zip} was ${http.STATUS_CODES[response.statusCode].toLowerCase()}. Try somewhere you ACTUALLY know next time :)`;
             const statusCodeError = new Error(message);
             printError(statusCodeError);
         }
