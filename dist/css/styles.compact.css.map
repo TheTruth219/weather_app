@@ -5,8 +5,8 @@
 		"styles.scss"
 	],
 	"sourcesContent": [
-		"// compileOnSave: true\r\n\r\nh1, .report, .input-container {\r\n  text-align: center;\r\n  margin-top: 5em;\r\n}\r\n"
+		"// compileOnSave: true\r\n\r\nh1, .report, .input-container {\r\n  text-align: center;\r\n  margin-top: 5em;\r\n}\r\n\r\n.submit-btn {\r\n  border-radius: 9px;\r\n  background-color: transparent;\r\n  border-color: black;\r\n  border-width: 2px;\r\n  color: black;\r\n  padding: 4px 9px;\r\n  margin-left: 2em;\r\n}\r\n\r\n.zipInput {\r\n  border-color: grey;\r\n  border-radius: 4px;\r\n  border-style: solid;\r\n  padding: 4px;\r\n  color: black;\r\n}\r\n"
 	],
 	"names": [],
-	"mappings": "qEAEA,AAAA,EAAE,EAAE,OAAO,EAAE,gBAAgB,CAAC,EAC5B,UAAU,EAAE,MAAM,EAClB,UAAU,EAAE,GAAG,GAChB"
+	"mappings": "qEAEA,AAAA,EAAE,EAAE,OAAO,EAAE,gBAAgB,CAAC,EAC5B,UAAU,EAAE,MAAM,EAClB,UAAU,EAAE,GAAG,GAChB;;qEAED,AAAA,WAAW,CAAC,EACV,aAAa,EAAE,GAAG,EAClB,gBAAgB,EAAE,WAAW,EAC7B,YAAY,EAAE,KAAK,EACnB,YAAY,EAAE,GAAG,EACjB,KAAK,EAAE,KAAK,EACZ,OAAO,EAAE,OAAO,EAChB,WAAW,EAAE,GAAG,GACjB;;sEAED,AAAA,SAAS,CAAC,EACR,YAAY,EAAE,IAAI,EAClB,aAAa,EAAE,GAAG,EAClB,YAAY,EAAE,KAAK,EACnB,OAAO,EAAE,GAAG,EACZ,KAAK,EAAE,KAAK,GACb"
 }
