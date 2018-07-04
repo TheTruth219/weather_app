@@ -6,26 +6,75 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Weather or Not</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="\css\styles.compact.css">
   </head>
   <body>
-    <h1>What's the weather like where you are?</h1>
-    <div class="input-container container">
-      <form class='form-submit'>
-        <input class="zipInput" type="text" name="zipInput" value="Enter Zip Code" >
-        <button type="submit" name="button" class="submit-btn">Submit</button>
-      </form>
-      <h2 class= "report"></h2>
+    <div class="container-fluid app-wrapper">
+      <div class="row">
+        <div class="col-lg-3">
+          <h1>What's the weather like?</h1>
+          <div class="input-container container">
+            <form class='form-submit'>
+              <input class="zipInput" type="text" name="zipInput" value="Enter Zip Code" >
+              <button type="submit" name="button" class="submit-btn">Submit</button>
+            </form>
+            <h5 class= "report"></h2>
+          </div>
+        </div>
+        <div class="col-lg-9 card-wrapper">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Arizona</h4>
+              <h5 class="card-subtitle mb-2 text-muted">Sunny</h5>
+              <h2>80&deg</h2>
+              <hr>
+              <table>
+                <thead>
+                  <tr>
+                    <th class="sunrise">Sunrise</th>
+                    <th class="sunset">Sunset</th>
+                  </tr>
+                  <tr>
+                    <td class="sunrise">5:30 AM</td>
+                    <td class="sunset">7:20 PM</td>
+                  </tr>
+                  <tr>
+                    <th>Low</th>
+                    <th>High</th>
+                  </tr>
+                  <tr>
+                    <td>79</td>
+                    <td>87</td>
+                  </tr>
+                  <tr>
+                    <th>Chance of Rain</th>
+                    <th>Humidity</th>
+                  </tr>
+                  <tr>
+                    <td>0%</td>
+                    <td>12%</td>
+                  </tr>
+                  <tr>
+                    <th>Visibility</th>
+                    <th>Wind</th>
+                  </tr>
+                  <tr>
+                    <td>12mi</td>
+                    <td>12mph</td>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="main.js"> </script>
     <!-- <script type="text/javascript" src="..\src\app.js"> </script> -->
-
-
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
   </body>
 </html>

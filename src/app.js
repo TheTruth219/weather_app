@@ -1,9 +1,12 @@
-
+if (module.hot) {
+  module.hot.accept();
+}
+// import "./css/styles.compact.css"
 const profile = require('./profile');
 
+
+
 //Select input on page to get zipInput
-
-
   const form =  document.querySelector(".form-submit");
   const zipInput = document.querySelector(".zipInput");
   const submitBtn = document.querySelector(".submit-btn");
