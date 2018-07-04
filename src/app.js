@@ -23,11 +23,11 @@ const profile = require('./profile');
         e.target.value = "Enter Zip Code";
       }
   });
-  form.addEventListener("submit", async function(e){
+  form.addEventListener("submit", function(e){
     e.preventDefault();
      userinfo += zipInput.value;
     let users = [userinfo.trim()];
-    let result = await users.forEach(profile.get)
+    let result = users.forEach(profile.get)
     userinfo = " ";
     zipInput.value = userinfo;
   });
